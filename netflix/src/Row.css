@@ -1,1 +1,9 @@
-﻿
+﻿.images .normal {
+    width: 100px;
+    height: 50px;
+}
+
+.images .large {
+    width: 250px;
+    height: 200px;
+}

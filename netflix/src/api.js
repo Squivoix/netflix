@@ -36,12 +36,12 @@ export const categories = [
     {
         name: "documentaries",
         title: "Documentários",
-        path: "/discover/tv/api_key=" + API_KEY + "&with_genres=99",
+        path: "/discover/tv?api_key=" + API_KEY + "&with_genres=99",
         isLarge: false,
     }
 ]
 
-export const getMovies = async (path) => {
+export const getData = async (path) => {
     const URI = DNS + path;
 
     try {

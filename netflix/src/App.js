@@ -2,17 +2,26 @@
 import { categories } from "./api";
 import Row from "./Row";
 
-console.log(categories);
-
 function App() {
     return (
-        <>
+        <div>
+            { /* Navbar */}
+            { /* Banner */}
+            { /* Categorias - Linhas */}
+
             {categories.map((category) => {
+
                 return (
-                    <Row title={category.title} />
+                    <Row
+                        key={category.name}
+                        name={category.name}
+                        title={category.title}
+                        isLarge={categories.isLarge}
+                        path={category.path}
+                    />
                 );
-            }) }
-        </>
+            })}
+        </div>
     );
 }
 

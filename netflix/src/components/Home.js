@@ -22,7 +22,6 @@ export default function Home() {
 
     useEffect(() => {
         getData().then((data) => {
-            console.log(data);
             setTvs(data);
         });
 
