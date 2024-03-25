@@ -1,9 +1,36 @@
-﻿.images .normal {
-    width: 100px;
-    height: 50px;
+﻿.row-container {
+    margin-left: 20px;
+    color: white;
 }
 
-.images .large {
-    width: 250px;
-    height: 200px;
+.row-cards {
+    padding: 20px;
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+
+.row-cards::-webkit-scrollbar {
+    display: none;
+}
+
+.movie-card {
+    object-fit: contain;
+    width: 100%;
+    max-height: 50px;
+    margin-bottom: 10px;
+    transition: transform 450ms;
+}
+
+.movie-card {
+    object-fit: contain;
+    width: 100%;
+    max-height: 300px;
+    margin-bottom: 10px;
+    transition: transform 450ms;
+}
+
+.movie-card:hover {
+    transform: scale(1.08);
+    cursor: pointer;
 }

@@ -1,7 +1,7 @@
-﻿import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
-import "./Row.css";
-import { getData } from "./api";
+import './Row.css';
+import { getData } from './api';
 
 function Row({ title, isLarge, path }) {
     const [movies, setMovies] = useState();
@@ -13,21 +13,20 @@ function Row({ title, isLarge, path }) {
     }
 
     useEffect(() => {
-        fetchData().then((data) => {
+        let request = fetchData();
+
+        request.then((data) => {
             setMovies(data?.results);
         });
     }, [])
 
     return (
-        <div className="teste">
-            {title}
-            <div className="images">
+        <div className="row-container">
+            <h2>{title}</h2>
+            <div className="row-cards">
                 {movies?.map((movie) => {
-                    console.log(isLarge);
-                    let cl = isLarge ? "large" : "normal";
-
                     return (
-                        <img key={movie?.id} className={cl} src={image_host + movie?.backdrop_path} />
+                        <img key={movie?.id} className={`movie-card ${isLarge && "movie-card-large"}`} alt={"Movie " + title + " Banner"} src={isLarge ? image_host + movie?.backdrop_path : image_host + movie?.poster_path} />
                     );
                 })}
             </div>

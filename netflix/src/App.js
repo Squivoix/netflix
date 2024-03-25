@@ -1,4 +1,4 @@
-﻿import './App.css';
+import './App.css';
 import { categories } from "./api";
 import Row from "./Row";
 
@@ -16,7 +16,7 @@ function App() {
                         key={category.name}
                         name={category.name}
                         title={category.title}
-                        isLarge={categories.isLarge}
+                        isLarge={category.isLarge}
                         path={category.path}
                     />
                 );
