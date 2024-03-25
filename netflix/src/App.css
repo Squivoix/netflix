@@ -3,3 +3,7 @@ body {
     color: #FFF;
     margin-left: 1%;
 }
+
+body::-webkit-scrollbar {
+    display: none;
+}

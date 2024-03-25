@@ -1,4 +1,4 @@
-﻿//Create my account and get my api key
+//Create my account and get my api key
 const API_KEY = '011cb5d3d6e81f18cdb89e4a3192b13e'; // <- Not my API
 const DNS = "https://api.themoviedb.org/3";
 
